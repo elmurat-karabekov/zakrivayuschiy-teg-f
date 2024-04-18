@@ -15,6 +15,25 @@
 */
 
 .page {
+  color: var(--clr-accent);
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.166;
+  background-color: var(--clr-bg);
+  background-image: var(--grad-multi-bg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  container-type: inline-size;
+}
+
+@supports (font-variation-settings: normal) {
+  .page {
+    font-family: var(--ff-main, sans-serif);
+    font-variation-settings: 'wght' var(--fw-main, 400);
+  }
 }
